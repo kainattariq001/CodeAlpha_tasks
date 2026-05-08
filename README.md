@@ -1,5 +1,5 @@
 # CodeAlpha_tasks
-# CodeAlpha Scientific Calculator
+# CodeAlpha_Calculator
 
 A modern, responsive, and feature-rich scientific calculator built using HTML, CSS, and JavaScript.
 
