@@ -47,7 +47,7 @@ This calculator supports both basic and advanced scientific operations with a cl
 
 ---
 
-## Screenshot
+## Calculator Screenshot
 
 ![Calculator Screenshot](screenshot.png)
 
