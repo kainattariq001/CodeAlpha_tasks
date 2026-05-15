@@ -46,8 +46,7 @@ This calculator supports both basic and advanced scientific operations with a cl
 3. Start calculating
 
 ---
-
-## Screenshot
+## Calculator Image
 ![Calculator Screenshot](CodeAlpha_Calculator/screenshot.png)
 
 ---
