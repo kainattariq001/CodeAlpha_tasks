@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* HEADER */
+header {
+    padding: 60px;
+    background: linear-gradient(45deg, #000, #333);
+    color: white;
+}
+
+.profile {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* SECTIONS */
+section {
+    padding: 40px;
+}
+
+/* SKILLS */
+.skills span {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* HEADER LAYOUT */
+
+header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    text-align:left;
+    flex-wrap:wrap;
+}
+
+/* PROFILE IMAGE */
+
+.profile{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #00ffcc;
+    box-shadow:0 0 30px #00ffcc;
+}
+
+/* HEADER TEXT */
+
+.header-text{
+    max-width:500px;
+}
+
+/* INFO CARDS */
+
+.info-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:15px;
+    margin-top:25px;
+}
+
+.info-cards .card{
+    background:#111;
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    transition:0.4s;
+}
+
+.info-cards .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 20px #00ffcc;
+}
+
+.info-cards .card h3{
+    margin-bottom:10px;
+    color:#00ffcc;
+}

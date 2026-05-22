@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kainat Tariq Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0d0d0d;
+      color:white;
+    }
+
+    /* HEADER */
+    header{
+      width:100%;
+      padding:20px 10%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      background:rgba(0,0,0,0.7);
+      backdrop-filter:blur(10px);
+      z-index:1000;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:700;
+    }
+
+    .logo span{
+      color:#8b5cf6;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:30px;
+      transition:0.3s;
+      font-size:16px;
+    }
+
+    nav a:hover{
+      color:#8b5cf6;
+    }
+
+    /* HERO SECTION */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:120px 10%;
+      gap:50px;
+      background:linear-gradient(to right,#0d0d0d,#1b1b1b);
+    }
+
+    .hero-text{
+      flex:1;
+    }
+
+    .hero-text h3{
+      font-size:28px;
+      color:#ccc;
+    }
+
+    .hero-text h1{
+      font-size:70px;
+      margin:15px 0;
+      line-height:1.2;
+    }
+
+    .hero-text h1 span{
+      color:#8b5cf6;
+    }
+
+    .typing{
+      font-size:35px;
+      color:#8b5cf6;
+      font-weight:600;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      color:#cfcfcf;
+      line-height:1.8;
+      margin-bottom:35px;
+      max-width:600px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 35px;
+      border-radius:10px;
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      transition:0.4s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary{
+      background:#8b5cf6;
+      box-shadow:0 0 20px rgba(139,92,246,0.5);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-5px);
+      background:#6d28d9;
+    }
+
+    .btn-outline{
+      border:2px solid #8b5cf6;
+      background: transparent;
+    }
+
+    .btn-outline:hover{
+      background:#8b5cf6;
+      box-shadow:0 0 20px rgba(139,92,246,0.5);
+    }
+
+    /* IMAGE */
+    .hero-image{
+      flex:1;
+      display:flex;
+      justify-content:center;
+      position:relative;
+    }
+
+    .circle{
+      width:350px;
+      height:350px;
+      background:#8b5cf6;
+      border-radius:50%;
+      position:absolute;
+      filter:blur(120px);
+      opacity:0.4;
+    }
+
+    .hero-image img{
+      width:360px;
+      height:360px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid #8b5cf6;
+      position:relative;
+      z-index:1;
+      box-shadow:0 0 40px rgba(139,92,246,0.5);
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%{ transform:translateY(0px); }
+      50%{ transform:translateY(-15px); }
+      100%{ transform:translateY(0px); }
+    }
+
+    /* ABOUT */
+    .about-section{
+      padding:100px 10%;
+      background:#111;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:60px;
+    }
+
+    .about-image img{
+      width:350px;
+      border-radius:15px;
+      border:4px solid #8b5cf6;
+      box-shadow:0 0 30px rgba(139,92,246,0.3);
+    }
+
+    .about-text{
+      flex:1;
+    }
+
+    .title{
+      font-size:45px;
+      margin-bottom:25px;
+    }
+
+    .title span{
+      color:#8b5cf6;
+    }
+
+    .about-text p{
+      color:#cfcfcf;
+      line-height:1.9;
+      margin-bottom:20px;
+    }
+
+    /* CARDS */
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:#1a1a1a;
+      padding:25px;
+      border-radius:15px;
+      border:1px solid #2a2a2a;
+      transition:0.4s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#8b5cf6;
+      box-shadow:0 0 20px rgba(139,92,246,0.3);
+    }
+
+    .card i{
+      font-size:30px;
+      color:#8b5cf6;
+      margin-bottom:15px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+    }
+
+    .card p{
+      font-size:14px;
+      color:#bdbdbd;
+    }
+
+    /* SKILLS */
+    .skills{
+      padding:100px 10%;
+      background:#0d0d0d;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:45px;
+      margin-bottom:20px;
+    }
+
+    .section-title span{
+      color:#8b5cf6;
+    }
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .skill-box{
+      background:#1a1a1a;
+      padding:35px;
+      border-radius:15px;
+      text-align:center;
+      transition:0.4s;
+      border:1px solid #2a2a2a;
+    }
+
+    .skill-box:hover{
+      transform:translateY(-10px);
+      border-color:#8b5cf6;
+      box-shadow:0 0 20px rgba(139,92,246,0.3);
+    }
+
+    .skill-box i{
+      font-size:45px;
+      color:#8b5cf6;
+      margin-bottom:15px;
+    }
+
+    .skill-box h3{
+      margin-bottom:10px;
+    }
+
+    .skill-box p{
+      color:#bdbdbd;
+      font-size:14px;
+    }
+
+    /* PROJECTS */
+    .projects{
+      padding:100px 10%;
+      background:#111;
+    }
+
+    .project-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .project-card{
+      background:#1a1a1a;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.4s;
+    }
+
+    .project-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px rgba(139,92,246,0.3);
+    }
+
+    .project-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:20px;
+    }
+
+    .project-content h3{
+      color:#8b5cf6;
+      margin-bottom:10px;
+    }
+
+    .project-content p{
+      color:#cfcfcf;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    /* NEW NEW CONTACT LAYOUT SECTION */
+    .contact{
+      padding:100px 10%;
+      background:#0d0d0d;
+    }
+
+    .contact-subtitle {
+      text-align: center;
+      color: #cfcfcf;
+      font-size: 16px;
+      margin-bottom: 50px;
+    }
+
+    .contact-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Left Side Form */
+    .contact-form {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .form-group label {
+      color: #cfcfcf;
+      font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 15px;
+      background: #111;
+      border: 1px solid #2a2a2a;
+      border-radius: 8px;
+      color: white;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 10px rgba(139,92,246,0.2);
+    }
+
+    /* Right Side Details */
+    .contact-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 30px;
+      text-align: left;
+      padding-top: 25px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .info-item i {
+      font-size: 22px;
+      color: #8b5cf6;
+      width: 30px;
+      text-align: center;
+    }
+
+    .info-detail h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .info-detail p {
+      color: #cfcfcf;
+      font-size: 14px;
+    }
+
+    .follow-me-section {
+      margin-top: 20px;
+    }
+
+    .follow-me-section h4 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .socials{
+      display: flex;
+      gap: 15px;
+    }
+
+    .socials a{
+      display:inline-flex;
+      justify-content:center;
+      align-items:center;
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:#1a1a1a;
+      color:#8b5cf6;
+      text-decoration:none;
+      font-size:20px;
+      transition:0.4s;
+    }
+
+    .socials a:hover{
+      background:#8b5cf6;
+      color:white;
+      transform:translateY(-5px);
+    }
+
+    /* FOOTER */
+    footer{
+      background:#111;
+      text-align:center;
+      padding:20px;
+      color:#aaa;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:950px){
+      .hero,
+      .about-section,
+      .contact-container{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .contact-info {
+        align-items: center;
+        text-align: center;
+      }
+
+      .info-item {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .socials {
+        justify-content: center;
+      }
+
+      .cards{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text h1{
+        font-size:50px;
+      }
+
+      nav{
+        display:none;
+      }
+
+      .buttons{
+        justify-content:center;
+      }
+
+      .hero-image img{
+        width:280px;
+        height:280px;
+      }
+
+      .about-image img{
+        width:280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      Kainat <span>Tariq</span>
+    </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h3>Hello It's Me</h3>
+      <h1>Kainat <span>Tariq</span></h1>
+      <div class="typing">Frontend Developer</div>
+      <p>
+        I create modern, responsive and beautiful websites
+        with smooth animations and amazing user experience.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="circle"></div>
+      <img src="Image.jpg" alt="Kainat Tariq">
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-image">
+      <img src="Image.jpg" alt="Kainat Tariq">
+    </div>
+    <div class="about-text">
+      <h2 class="title">About <span>Me</span></h2>
+      <p>
+        I'm Kainat Tariq, a passionate Frontend Developer who loves creating beautiful and interactive websites.
+      </p>
+      <p>I enjoy learning new technologies and building creative projects.</p>
+      
+      <div class="cards">
+        <div class="card">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Innovative</h3>
+          <p>I create creative and modern website solutions.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-paintbrush"></i>
+          <h3>Design Oriented</h3>
+          <p>Beautiful UI and user experience are my priority.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-code"></i>
+          <h3>Clean Code</h3>
+          <p>Clean, optimized and maintainable coding style.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Fast Performance</h3>
+          <p>Responsive and high-speed websites for all devices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML5</h3>
+        <p>Modern Website Structure</p>
+      </div>
+      <div class="skill-box">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS3</h3>
+        <p>Responsive & Attractive Styling</p>
+      </div>
+      <div class="skill-box">
+        <i class="fa-brands fa-js"></i>
+        <h3>JavaScript</h3>
+        <p>Interactive Website Features</p>
+      </div>
+      <div class="skill-box">
+        <i class="fa-brands fa-react"></i>
+        <h3>React JS</h3>
+        <p>Modern Frontend Development</p>
+      </div>
+      <div class="skill-box">
+        <i class="fa-brands fa-bootstrap"></i>
+        <h3>Bootstrap</h3>
+        <p>Fast Responsive UI Design</p>
+      </div>
+      <div class="skill-box">
+        <i class="fa-solid fa-database"></i>
+        <h3>Firebase</h3>
+        <p>Authentication & Backend</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="project-container">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop">
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>Responsive personal portfolio website using HTML, CSS and JavaScript.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
+        <div class="project-content">
+          <h3>React Web App</h3>
+          <p>Modern React JS application with responsive UI design.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+        <div class="project-content">
+          <h3>E-Commerce UI</h3>
+          <p>Attractive online shopping frontend website design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+    <p class="contact-subtitle">Have a project in mind or want to collaborate? Let's talk!</p>
+
+    <div class="contact-container">
+      <form class="contact-form" action="https://formspree.io/f/xjgzrvzo" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <div style="text-align: left;">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <div class="info-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="info-detail">
+            <h4>Location</h4>
+            <p>Wah Cantt, Pakistan</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div class="info-detail">
+            <h4>Email</h4>
+            <p>kainattariqbsit@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <i class="fa-solid fa-phone"></i>
+          <div class="info-detail">
+            <h4>Phone</h4>
+            <p>+92 3030511143</p>
+          </div>
+        </div>
+
+        <div class="follow-me-section">
+          <h4>Follow Me</h4>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/kainat-tariq-306462379?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/kainattariq001/CodeAlpha_tasks"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Kainat Tariq | All Rights Reserved
+  </footer>
+
+</body>
+</html>
